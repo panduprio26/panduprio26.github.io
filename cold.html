@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Brew | Kopilogi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="data/favicon-32x32.png">
+     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:ital@1&display=swap');
+      .banner {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("data/menu/banner.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        background-size: cover;
+        
+        
+      }
+      .banner-content {
+        top: 50%;
+        width: 100%;
+        color: white;
+        position: absolute;
+        transform: translateY(-50%);
+      }
+      .banner-content h2 {
+        font-size: 60px;
+        margin-top: 98px;
+        font-family: 'Outfit', sans-serif;
+        text-align: center;
+      }
+      .banner-content h4 {
+        margin-bottom: 9px;      
+        font-family: Dancing Script, cursive;
+        text-align: center;  
+      }
+      .banner-content p {
+        text-align: center;
+        font-family: Playfair, serif;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .nav-item a {
+        display: block;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: 0.2s;
+        margin: 0 5px;
+      }
+      .nav-item a:hover {
+        color: white;
+        background: black;
+      }
+      .navbar-toggler {
+       position: relative;
+       
+      }
+      .btn {
+       border: 1px solid #fff;
+       background: none;
+       padding: 10px 24px;
+       font-size: 20px;
+       font-family: "montserrat";
+       cursor: pointer;
+       margin: 10px;
+       transition: 0.8s;
+       position: relative;
+       overflow: hidden;
+       margin-left: 43%;
+       margin-top: 2%;
+       border-radius: 50px;
+    }
+      .btn1{
+       color: #fff;
+    }
+      .btn1:hover{
+       color: black;
+    }
+      .btn::before{
+       content: "";
+       position: absolute;
+       left: 0;
+       width: 100%;
+       height: 0%;
+       background: #fff;
+       z-index: -1;
+       transition: 0.8s;
+    }
+      .btn1::before{
+       top: 0;
+       border-radius: 0 0 50% 50%;
+    }
+      .btn1:hover::before{
+       height: 180%;
+    } 
+      .btn2 {
+        border: 1px solid black;
+        background:none;
+        padding: 10px 24px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: 0.5s ease;
+      }
+      .btn2:hover {
+        background-color: black;
+        color: white;
+      }
+      .btn3 {
+        border: 1px solid black;
+        background:none;
+        padding: 10px 24px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: 0.5s ease;
+      }
+      .btn3:hover {
+        background-color: black;
+        color: white;
+      }
+      .btn4 {
+        border: 1px solid black;
+        background:none;
+        padding: 10px 24px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: 0.5s ease;
+      }
+      .btn4:hover {
+        background-color: black;
+        color: white;
+      }
+      .btn5 {
+        border: 1px solid black;
+        background:none;
+        padding: 10px 24px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: 0.5s ease;
+      }
+      .btn5:hover {
+        background-color: black;
+        color: white;
+      }
+      .btn6 {
+        border: 1px solid black;
+        background:none;
+        padding: 10px 24px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: 0.5s ease;
+      }
+      .btn6:hover {
+        background-color: black;
+        color: white;
+      }
+      .banner-content a {
+        text-decoration: none;
+        color: white;
+      }
+      .banner-content a:hover {
+        color: black;
+      }
+      .card a{
+        background-color: transparent;
+        color: black;
+      }
+      
+      .section h2 {
+        width: max-content;
+        position: relative;
+      }
+      .section h2::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        background-color: black;
+        transition: 0.3s;
+      }
+      .col h3 {
+        width: max-content;
+        position: relative;
+      }
+      .col h3::after {
+        content: "";
+        position: absolute;
+        bottom: -13px;
+        height: 4px;
+        width: 90px;
+        left: 0;
+        background-color: black;
+      }
+      .col a {
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        padding: 5px 15px;
+        border-radius: 50px;
+        transition: 0.3s;
+        float: left;
+        position: relative;
+        
+      }
+      .col a:hover {
+        background-color: black;
+        color: white;
+      }
+      .gallery {
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+      }
+      .gallery img {
+        width: 100%;
+        height: 280px;
+        border: 1px solid #eee;
+        box-shadow: 1px 2px 3px #ddd;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .star {
+        margin-top: 9px;
+        margin-left: -20px;
+
+      }
+      footer{
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            background: #111;
+            height: auto;
+            width: 100vw;
+            font-family: "Open Sans";
+            padding-top: 40px;
+            color: white;
+        }
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-content h3{
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+        .footer-content p{
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+        }
+        .socials{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+        .socials li{
+            margin: 0 10px;
+        }
+        .socials a{
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255,255,255,0.2);
+        }
+        .socials a i{
+            font-size: 1.1rem;
+            
+        }
+
+ 
+        .socials a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 40%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+        .socials a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        .footer-bottom{
+            background: black;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+        .footer-bottom span{
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+        .content i {
+          list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255,255,255,0.2);
+            font-size: 1.1rem;
+             display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 40%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+
+        }
+       
+      @media screen and (max-width: 768px){
+        .banner {
+          width: 500px;
+        }
+        .img {
+          top: 50px;
+          position: relative;
+        }
+        .banner-content h2 {
+          text-align: center;
+        }
+        .btn1 {
+          right: 10%;
+          margin-top: 8%; 
+        }
+        .btn2 {
+          right: -10%;
+        }
+        .btn3 {
+          right: 18%;
+          position: absolute;
+        }
+        .btn4 {
+          left: -82px;
+          margin-top: 5rem;
+        }
+        .btn5 {
+          left: 46px;
+          margin-top: -4rem;
+        }
+        .btn6 {
+           right: 18%;
+           margin-top: 16.5%;
+          position: absolute;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <div class="container">
+    <a class="navbar-brand"  href="#"><img src="data/logo.png" alt="Bootstrap" width="35" height="40"></a><p style="margin-top: 19px; margin-right: 5px; font-family: sans-serif;">KOPILOGI</p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="text-align: right;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-3">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+         <li class="nav-item dropdown mx-3">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Coffee & Sweets</a></li>
+            <li><a class="dropdown-item" href="menu2.html">Rice & Bites</a></li>
+          </ul>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="kontak.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="container-fluid banner" style="background-color: red;">
+  <div class="img">
+  <img class="animate__animated animate__fadeInDown" src="data/logo.png" style="margin-left: 39%; margin-top: 9%;">
+</div>
+    <div class="container banner-content">
+       <h2 class="animate__animated animate__fadeInDown">Coffee & Sweets</h2>
+          <a href="#cold" class="btn btn1">Read More</a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container" data-aos="fade-up">
+    <div id="cold" class="section">
+      <h2 style=" margin-left: 41%; color: black; font-family: Dancing Script, cursive;">Menu</h2>
+      <br>
+      <br>
+      <a href="menu1.html" class="btn btn2">Es Kopilogi</a>
+      <a href="#brew" class="btn btn2">Cold Brew</a>
+      <a href="fruit.html" class="btn btn2">White Fruit</a>
+      <a href="latte.html" class="btn btn2">White Latte</a>
+      <a href="kopi.html" class="btn btn5">Coffee</a>
+      <a href="teh.html" class="btn btn3">Tea & Shake</a>
+      <a href="frappe.html" class="btn btn4">Frappe</a>
+      <a href="drink.html" class="btn btn6">Drink Drunk</a>
+      
+      
+    </div>
+
+      <br><br><br>
+    </div>
+  </div>
+  <div class="container" data-aos="fade-up">
+    <div id="brew" class="section">
+     <h2 style=" margin-left: 39%; color: black; font-family: Dancing Script, cursive;">Cold Brew</h2>
+     <br>
+     <br>
+     <img src="">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="border: none;">
+              <img src="data/menu/coldbrew.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">Cold Brew White 250ml Pure</h5>
+                <p class="card-text">Es Kopilogi Tersedia Rasa FreshMilk dan Vanilla</p>
+                 <p class="card-text">Rp 27.500</p>
+
+                
+  </div>
+</div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="border: none;">
+              <img src="data/menu/coldbrew.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">Cold Brew ButterScotch</h5>
+                <p class="card-text">Es Kopilogi Dengan Rasa ButterScotch Signature Kopilogi</p>
+                 <p class="card-text">Rp 29.000</p>      
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <br><br>
+    <div class="container">
+      <div class="section">
+        <footer>
+        <div class="footer-content">
+            <h3>KOPILOGI</h3>
+            <p>Berdiri Sejak 2015, Kopilogi sebuah kedai kopi beralamat di Jl.Cikuray No.42, Regol, Kecamatan Garut Kota, Kabupaten Garut.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+            <div class="content">
+              <p><i class="fa-solid fa-shop"></i>Buka Setiap Hari Pukul : 08.00-22.00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2023 KOPILOGI. designed by <span>pandu</span></p>
+        </div>
+    </footer>
+      </div>
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
